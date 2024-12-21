@@ -1,0 +1,72 @@
+:root {
+    --accent: #ffec3e;
+}
+
+body {
+    background-color:hsla(224,23%,7%,1);
+    background-image:
+    radial-gradient(at 86% 20%, hsla(265,22%,20%,1) 0px, transparent 50%),
+    radial-gradient(at 87% 86%, hsla(205,52%,12%,1) 0px, transparent 50%),
+    radial-gradient(at 7% 12%, hsla(225,26%,17%,1) 0px, transparent 50%),
+    radial-gradient(at 9% 86%, hsla(198,56%,12%,1) 0px, transparent 50%);
+}
+
+.main-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    
+
+}
+
+.name-title {
+    font-family: "griffith-gothic", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 200px;
+    color: var(--accent); 
+
+    margin: 0;
+}
+
+.name-subtitle {
+    font-family: "gotham", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 60px;
+    color: white;
+
+    margin: 0;
+}
+
+.continue-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    position: absolute;
+    bottom: 20%;
+}
+
+.continue-wrapper button {
+    font-family: "gotham", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 20px;
+    color: #FFFFFF50;
+    background: none;
+    text-decoration: none;
+    border: 2px solid #FFFFFF50;
+    padding: 10px 20px;
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+.continue-wrapper button:hover {
+    @animation: pulse 1s infinite;
+}
