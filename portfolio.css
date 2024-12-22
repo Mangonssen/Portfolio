@@ -49,14 +49,14 @@ body {
     align-items: center;
     
     position: absolute;
-    bottom: 20%;
+    bottom: 17%;
 }
 
 .continue-wrapper button {
     font-family: "gotham", sans-serif;
     font-weight: 500;
     font-style: normal;
-    font-size: 20px;
+    font-size: 15px;
     color: #FFFFFF50;
     background: none;
     text-decoration: none;
@@ -65,8 +65,13 @@ body {
     border-radius: 5px;
 
     cursor: pointer;
+    transition: border-color 0.5s ease, color 0.5s ease;
 }
 
 .continue-wrapper button:hover {
-    @animation: pulse 1s infinite;
+    
+    color: white;
+    border: 2px solid white;
 }
+
+
