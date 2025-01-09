@@ -1,5 +1,12 @@
 :root {
-    --accent: #ffec3e;
+    --accent: linear-gradient(to bottom, #597dff 0%, #ff34a4 80%);
+}
+
+.debug-box {
+    width: 100vw;
+    height: 100vh;
+
+    background-color: var(--accent); 
 }
 
 body {
@@ -22,24 +29,70 @@ body {
 
 }
 
+.title-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+
+.name-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+
 .name-title {
-    font-family: "griffith-gothic", sans-serif;
+    font-family: "ivypresto-headline", sans-serif;
     font-weight: 700;
     font-style: normal;
-    font-size: 200px;
-    color: var(--accent); 
 
+    background: var(--accent); 
+    font-size: 25vh;
+    background-clip: text;
+    color: transparent;
+    
+
+    padding: 20px;
     margin: 0;
 }
 
+@keyframes reactive-dot {
+    0% {
+        bottom: 0;
+    }
+    100% {
+        bottom: 50%;
+    }
+}
+
+.name-title {
+    transition: transform 2s ease;
+   
+}
+
+.name-title:hover {
+
+    transform: translateY(-10%);
+}
+
+
+
+
+
 .name-subtitle {
-    font-family: "gotham", sans-serif;
-    font-weight: 500;
+    font-family: "Bahnschrift", sans-serif;
+    font-weight: 100;
     font-style: normal;
-    font-size: 60px;
+    font-size: 4vh;
     color: white;
 
-    margin: 0;
+    letter-spacing: 25px;
+
+    margin-top: 0;
 }
 
 .continue-wrapper {
@@ -52,26 +105,72 @@ body {
     bottom: 17%;
 }
 
-.continue-wrapper button {
-    font-family: "gotham", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 15px;
-    color: #FFFFFF50;
-    background: none;
-    text-decoration: none;
-    border: 2px solid #FFFFFF50;
-    padding: 10px 20px;
-    border-radius: 5px;
+@keyframes button-hover-in {
 
-    cursor: pointer;
-    transition: border-color 0.5s ease, color 0.5s ease;
+    10% {
+        background: #ff34a4;
+        color: #0e1c26;
+        border: none;
+        
+    }
+    100% {
+        background: #ff34a4;
+        color: #0e1c26;
+        border: none;
+        transform: scaleX(1.1);
+    }
 }
+
+@keyframes button-hover-out {
+    0%{
+        background: #ff34a4;
+        color: #0e1c26;
+        border: none;
+        transform: scaleX(1.1); 
+    }
+    100% {
+        background: transparent;
+        color: white;
+        border: 1px solid white;
+        transform: scaleX(1);
+    }
+}
+
+.continue-wrapper button {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white; /* Weißer Text */
+    text-transform: uppercase;
+    background: transparent;
+    border: 1px solid white;
+    cursor: pointer;
+    overflow: hidden;
+    transition: color 0.1s ease;
+    letter-spacing: 5px;
+
+    font-family: "Bahnschrift", sans-serif;
+    font-weight: 100;
+
+    animation: button-hover-out 1s ease forwards;
+
+    
+}
+
+
+
 
 .continue-wrapper button:hover {
     
-    color: white;
-    border: 2px solid white;
+    animation: button-hover-in 1s ease forwards;
+    transform-origin: center;
+
+    font-weight: 400;
+    
 }
+
+
 
 
